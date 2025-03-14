@@ -8,14 +8,14 @@ namespace ProblemPlecakowy
 {
     internal class Result
     {
-        List<int> ids;
+        public List<int> ids { get; set; }
         public int weight {  get; set; }
         public int value { get; set; }
-        public Result(List<int> ids, int weight, int value) 
+        public Result() 
         {
-            this.ids = ids;
-            this.weight = weight;
-            this.value = value;
+            ids = new List<int>();
+            weight = 0;
+            value = 0;
         }
 
         public override string ToString()

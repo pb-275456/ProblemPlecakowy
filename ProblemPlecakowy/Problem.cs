@@ -36,24 +36,22 @@ namespace ProblemPlecakowy
 
         public Result Solve(int capacity)
         {
-            var sorted = items.OrderByDescending(i => (double)(i.value / i.weight)).ToList();
-            List<int> result = new List<int>();
-            int totalWeight = 0;
-            int totalValue = 0;
+            var sorted = items.OrderByDescending(i => (double)(i.value/i.weight)).ToList();
+            Result result = new Result();
             int leftSpace = capacity;
             foreach (Item i in sorted)
             {
                 if (leftSpace >= i.weight)
                 {
-                    totalValue += i.value;
-                    totalWeight+=i.weight;
-                    result.Add(i.id);
+                    result.value += i.value;
+                    result.weight+=i.weight;
+                    result.ids.Add(i.id);
                     leftSpace-=i.weight;
                 }
             }
 
 
-            return new Result(result, totalWeight, totalValue);
+            return result;
         }
 
     }
