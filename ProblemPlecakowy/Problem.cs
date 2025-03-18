@@ -12,7 +12,7 @@ namespace ProblemPlecakowy
     {
         int n;
         int seed;
-        List<Item> items;
+        public List<Item> items { get; }
 
         public Problem(int n, int seed)
         {
