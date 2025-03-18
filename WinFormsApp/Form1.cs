@@ -30,8 +30,10 @@ namespace WinFormsApp
             int n = int.Parse(numberBox.Text);
             int capacity = int.Parse(capacityBox.Text);
 
-            Problem p = new Problem(n, seed);
-            Result result = p.Solve(capacity);
+            Problem problem = new Problem(n, seed);
+            Result result = problem.Solve(capacity);
+
+            instanceBox.Text = problem.ToString();
 
             resultBox.Text = result.ToString();
         }

@@ -110,6 +110,7 @@
             // 
             instanceBox.FormattingEnabled = true;
             instanceBox.Location = new Point(348, 49);
+            instanceBox.MultiColumn = true;
             instanceBox.Name = "instanceBox";
             instanceBox.Size = new Size(270, 384);
             instanceBox.TabIndex = 8;
@@ -120,6 +121,7 @@
             resultBox.Location = new Point(46, 308);
             resultBox.Multiline = true;
             resultBox.Name = "resultBox";
+            resultBox.ReadOnly = true;
             resultBox.Size = new Size(234, 125);
             resultBox.TabIndex = 9;
             // 
