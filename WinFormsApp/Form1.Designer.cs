@@ -35,10 +35,10 @@
             labelCapacity = new Label();
             numberBox = new TextBox();
             capacityBox = new TextBox();
-            instanceBox = new ListBox();
             resultBox = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            instanceBox = new TextBox();
             SuspendLayout();
             // 
             // buttonRun
@@ -73,13 +73,12 @@
             // 
             labelNumber.AutoSize = true;
             labelNumber.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            labelNumber.Location = new Point(47, 88);
+            labelNumber.Location = new Point(46, 88);
             labelNumber.Name = "labelNumber";
             labelNumber.Size = new Size(124, 20);
             labelNumber.TabIndex = 4;
             labelNumber.Text = "Number of itmes";
             labelNumber.TextAlign = ContentAlignment.MiddleCenter;
-            labelNumber.Click += Items_Click;
             // 
             // labelCapacity
             // 
@@ -90,7 +89,6 @@
             labelCapacity.Size = new Size(67, 20);
             labelCapacity.TabIndex = 5;
             labelCapacity.Text = "Capacity";
-            labelCapacity.Click += labelSize_Click;
             // 
             // numberBox
             // 
@@ -106,18 +104,9 @@
             capacityBox.Size = new Size(125, 27);
             capacityBox.TabIndex = 7;
             // 
-            // instanceBox
-            // 
-            instanceBox.FormattingEnabled = true;
-            instanceBox.Location = new Point(348, 49);
-            instanceBox.MultiColumn = true;
-            instanceBox.Name = "instanceBox";
-            instanceBox.Size = new Size(270, 384);
-            instanceBox.TabIndex = 8;
-            instanceBox.SelectedIndexChanged += listBox1_SelectedIndexChanged;
-            // 
             // resultBox
             // 
+            resultBox.AcceptsReturn = true;
             resultBox.Location = new Point(46, 308);
             resultBox.Multiline = true;
             resultBox.Name = "resultBox";
@@ -139,21 +128,31 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label2.Location = new Point(348, 26);
+            label2.Location = new Point(331, 26);
             label2.Name = "label2";
             label2.Size = new Size(65, 20);
             label2.TabIndex = 11;
             label2.Text = "Instance";
+            // 
+            // instanceBox
+            // 
+            instanceBox.Location = new Point(331, 49);
+            instanceBox.Multiline = true;
+            instanceBox.Name = "instanceBox";
+            instanceBox.ReadOnly = true;
+            instanceBox.ScrollBars = ScrollBars.Vertical;
+            instanceBox.Size = new Size(287, 384);
+            instanceBox.TabIndex = 12;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(653, 476);
+            Controls.Add(instanceBox);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(resultBox);
-            Controls.Add(instanceBox);
             Controls.Add(capacityBox);
             Controls.Add(numberBox);
             Controls.Add(labelCapacity);
@@ -177,9 +176,9 @@
         private Label labelCapacity;
         private TextBox numberBox;
         private TextBox capacityBox;
-        private ListBox instanceBox;
         private TextBox resultBox;
         private Label label1;
         private Label label2;
+        private TextBox instanceBox;
     }
 }
