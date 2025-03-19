@@ -20,7 +20,7 @@ namespace ProblemPlecakowy
 
         public override string ToString()
         {
-            return $"items: {string.Join(", ", ids)} \nweight: {weight} \nvalue: {value}";
+            return $"items: {string.Join(", ", ids)} \r\nweight: {weight} \r\nvalue: {value}";
         }
 
     }

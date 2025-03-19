@@ -33,7 +33,7 @@ namespace ProblemPlecakowy
 
         public override string ToString()
         {
-            return $"items:\n"+ string.Join("\n", items);
+            return string.Join("\r\n", items);
         }
 
         public Result Solve(int capacity)

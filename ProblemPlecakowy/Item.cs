@@ -14,7 +14,7 @@ namespace ProblemPlecakowy
 
         public override string ToString()
         {
-            return $"no. {id}, value: {value}, weight: {weight}";
+            return $"no. {id, -5} value: {value, -5} weight: {weight}";
         }
 
         public Item(int value, int weight, int id)

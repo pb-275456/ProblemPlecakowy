@@ -11,9 +11,12 @@ namespace ProblemPlecakowy
             int n = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter capacity: ");
             int capacity = int.Parse(Console.ReadLine());
-            Problem p = new Problem(n, seed);
-            Result result = p.Solve(capacity);
-            Console.WriteLine(p.ToString());
+            
+            Problem problem = new Problem(n, seed);
+            Result result = problem.Solve(capacity);
+
+            Console.WriteLine("items:");
+            Console.WriteLine(problem.ToString());
             Console.WriteLine(result.ToString());
         }
     }
