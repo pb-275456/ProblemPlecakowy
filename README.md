@@ -1,7 +1,4 @@
 # Problem Plecakowy
-**Patrycja Biskot, 275456**
-
-
 Projekt rozwiązuje problem plecakowy za pomocą algorytmu zachłannego. Posiada prostą aplikację konsolową, graficzny interfejs użytkownika, oraz testy jednostkowe dla aplikacji konsolowej.
 
 ## Aplikacja Konsolowa
